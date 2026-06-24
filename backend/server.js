@@ -8,8 +8,8 @@ const app = express()
 
 connectDB()
 
-
-app.use(cors())
+const corsOptions = { origin: 'https://harmonious-salamander-79fcd8.netlify.app/', methods: ['GET', 'POST', 'PUT', 'DELETE'], allowedHeaders: ['Content-Type', 'Authorization'], credentials: true };
+app.use(cors(corsOptions)); 
 app.use(express.json())
 app.use("/api",productRoutes)
 
