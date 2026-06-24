@@ -18,7 +18,7 @@ function App() {
   const [nextCursor, setNextCursor] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const API = "http://localhost:8080/api/products";
+  const API = "https://products-browser-2.onrender.com/api/products";
 
   const fetchProducts = async (selectedCategory = "") => {
     try {
